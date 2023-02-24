@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tilt Warp', cursive;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./imagem/background.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+main{
+    background-color: #ffffff62;
+    width: 40%;
+    height: 90vh;
+    border-radius: 30px;
+
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    display: grid;
+    grid-template-areas: "logo logo logo"
+                         "person person person"
+                         "input input input";
+}
+#logo{
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 1;
+    z-index: 1;
+    filter: drop-shadow(0px 8px 8px #222);
+    width: 90%;
+}
+#cabecalho{
+    grid-area: logo;
+}
+#person{
+    grid-area: person;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.imagem{
+    grid-area: img;
+    width: 50%;
+}
+.imagem img{
+    width: 200px;
+    margin-left: 40px;
+    border: 10px solid #fff;
+    border-radius: 10px;
+    box-shadow: 2px 6px 10px #000;
+}
+.textPerson{
+    grid-area: text;
+    width: 50%;
+    margin-left: 20px;
+}
+.textPerson h3{
+    margin-bottom: 20px;
+    
+}
+.textPerson h3 span{
+    color: #04b5c5;
+    text-shadow: 0px 3px 2px #000;
+    letter-spacing: 1px;
+}
+#input{
+    grid-area: input;
+    height: 30%;
+    position: relative;
+    top: 30%;
+}
+#input h2{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #04b5c5;
+    text-shadow: 0px 3px 2px #000;
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+#name{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 70%;
+    height: 40px;
+    padding: 8px;
+    margin-bottom: 40px;
+
+    color: #fff;
+    text-shadow: 0px 3px 8px #00a86b;
+    outline: none;
+    border: 2px solid #50c878;
+    border-radius: 8px;
+    transition: all 0.5s;
+    background-color: #ffffff44;
+}
+#name::placeholder{
+    color: #666;
+}
+#name:hover, button:hover{
+    border: 1px solid #50c878;
+    box-shadow: 0px 4px 8px #50c878;
+    background-color: #fff;
+    color: #50c878;
+}
+.buttons{
+ position: absolute;
+ left: 50%;
+ transform: translate(-50%);
+}
+button{
+    background: linear-gradient(2deg, #4b795a 5%, #50c878 95%);
+    width: 90px;
+    padding: 10px;
+    margin-right:40px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: transparent;
+    transition: all 0.5s;
+}
+
